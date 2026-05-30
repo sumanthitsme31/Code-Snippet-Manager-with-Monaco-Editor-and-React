@@ -57,7 +57,7 @@ export async function importGist(url) {
       tags: ['gist', 'imported'],
     }
   } catch (err) {
-    throw new Error(err.message || 'Failed to import gist')
+    throw new Error(`Failed to fetch gist: ${err.message || 'Unknown error'}`)
   }
 }
 
